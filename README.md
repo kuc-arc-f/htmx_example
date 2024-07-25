@@ -4,7 +4,7 @@
 
  Author  : @kuc_arc_f
 
- date   : 2024/07/25
+ date   : 2024/07/24
 
  update :
 
@@ -14,6 +14,8 @@ htmx example, Vite + express.js
 
 ***
 ### stackblitz
+
+https://stackblitz.com/~/github.com/kuc-arc-f/htmx_example
 
 
 ***
