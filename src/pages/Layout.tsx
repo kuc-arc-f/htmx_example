@@ -25,6 +25,9 @@ const Layout = ({ children }) => {
       <a href="/about">[ about ]</a>
       <a href="/hxget">[ HxGet ]</a>
       <a href="/hxpost">[ HxPost ]</a>
+      <a href="/hxon">[ HxOn ]</a>
+      <a href="/click_event">[ ClickEvent ]</a>
+      <a href="/json_parse">[ JsonParse ]</a>
       <hr />        
       <main>{children}</main>
     </div>

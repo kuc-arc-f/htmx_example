@@ -8,10 +8,11 @@ import Top from './pages/App';
 import About from './pages/about';
 import HxGet from './pages/HxGet';
 import HxPost from './pages/HxPost';
-import Htmx4 from './pages/Htmx4';
+import HxOn from './pages/HxOn';
+import ClickEvent from './pages/ClickEvent';
+import JsonParse from './pages/JsonParse';
 //
 import testRouter from './routes/test'; 
-import commonRouter from './routes/commonRouter';
 //
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,10 +20,8 @@ app.use(express.static('public'));
 console.log("env=", process.env.NODE_ENV);
 //
 const errorObj = {ret: "NG", messase: "Error"};
-
 // route
 app.use('/api/test', testRouter);
-app.use('/api/common', commonRouter);
 
 //MPA
 app.get('/hxget', (req: any, res: any) => {
@@ -31,8 +30,14 @@ app.get('/hxget', (req: any, res: any) => {
 app.get('/hxpost', (req: any, res: any) => {
   try {res.send(renderToString(HxPost()));} catch (error) { res.sendStatus(500);}
 });
-app.get('/htmx4', (req: any, res: any) => {
-  try {res.send(renderToString(Htmx4()));} catch (error) { res.sendStatus(500);}
+app.get('/hxon', (req: any, res: any) => {
+  try {res.send(renderToString(HxOn()));} catch (error) { res.sendStatus(500);}
+});
+app.get('/click_event', (req: any, res: any) => {
+  try {res.send(renderToString(ClickEvent()));} catch (error) { res.sendStatus(500);}
+});
+app.get('/json_parse', (req: any, res: any) => {
+  try {res.send(renderToString(JsonParse()));} catch (error) { res.sendStatus(500);}
 });
 app.get('/about', (req: any, res: any) => {
   try {
