@@ -11,6 +11,7 @@ import HxPost from './pages/HxPost';
 import HxOn from './pages/HxOn';
 import ClickEvent from './pages/ClickEvent';
 import JsonParse from './pages/JsonParse';
+import DialogOpen from './pages/DialogOpen';
 //
 import testRouter from './routes/test'; 
 //
@@ -38,6 +39,9 @@ app.get('/click_event', (req: any, res: any) => {
 });
 app.get('/json_parse', (req: any, res: any) => {
   try {res.send(renderToString(JsonParse()));} catch (error) { res.sendStatus(500);}
+});
+app.get('/dialog_open', (req: any, res: any) => {
+  try {res.send(renderToString(DialogOpen()));} catch (error) { res.sendStatus(500);}
 });
 app.get('/about', (req: any, res: any) => {
   try {
