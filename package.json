@@ -3,10 +3,12 @@
   "scripts": {
     "dev": "NODE_ENV=develop nodemon",
     "build": "npm run clean && npm run build:server && node buildClient.js",
+    "build:prod": "NODE_ENV=production npm run clean && npm run build:server && node buildClient.js",
     "clean": "rimraf dist && rimraf public/static",
     "build:server": "vite build --ssr src/index.ts --outDir dist",
     "build:test": "npm run clean && node build.js && node buildClient.js",
     "watch": "npx nodemon",
+    "start": "NODE_ENV=production node dist/index.js",
     "test": "ts-node src/index.ts"
   },
   "dependencies": {

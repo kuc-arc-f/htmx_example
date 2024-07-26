@@ -50,10 +50,12 @@ app.get('/about', (req: any, res: any) => {
     res.sendStatus(500);
   }
 });
+//
 app.get('/', (req: any, res: any) => {
   try {
     res.send(renderToString(Top()));
   } catch (error) {
+    console.log(error);
     res.sendStatus(500);
   }
 });
