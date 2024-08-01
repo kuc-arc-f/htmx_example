@@ -12,6 +12,7 @@ import HxOn from './pages/HxOn';
 import ClickEvent from './pages/ClickEvent';
 import JsonParse from './pages/JsonParse';
 import DialogOpen from './pages/DialogOpen';
+import Ajax from './pages/Ajax';
 //
 import testRouter from './routes/test'; 
 //
@@ -43,6 +44,10 @@ app.get('/json_parse', (req: any, res: any) => {
 app.get('/dialog_open', (req: any, res: any) => {
   try {res.send(renderToString(DialogOpen()));} catch (error) { res.sendStatus(500);}
 });
+app.get('/ajax', (req: any, res: any) => {
+  try {res.send(renderToString(Ajax()));} catch (error) { res.sendStatus(500);}
+});
+
 app.get('/about', (req: any, res: any) => {
   try {
     res.send(renderToString(About()));

@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
       <a href="/click_event">[ ClickEvent ]</a>
       <a href="/json_parse">[ JsonParse ]</a>
       <a href="/dialog_open">[ DialogOpen ]</a>
+      <a href="/ajax">[ Ajax ]</a>
       <hr />        
       <main>{children}</main>
     </div>
