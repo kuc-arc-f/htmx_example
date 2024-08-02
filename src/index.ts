@@ -13,6 +13,7 @@ import ClickEvent from './pages/ClickEvent';
 import JsonParse from './pages/JsonParse';
 import DialogOpen from './pages/DialogOpen';
 import Ajax from './pages/Ajax';
+import TriggerLoad from './pages/TriggerLoad';
 //
 import testRouter from './routes/test'; 
 //
@@ -46,6 +47,9 @@ app.get('/dialog_open', (req: any, res: any) => {
 });
 app.get('/ajax', (req: any, res: any) => {
   try {res.send(renderToString(Ajax()));} catch (error) { res.sendStatus(500);}
+});
+app.get('/trigger_load', (req: any, res: any) => {
+  try {res.send(renderToString(TriggerLoad()));} catch (error) { res.sendStatus(500);}
 });
 
 app.get('/about', (req: any, res: any) => {
