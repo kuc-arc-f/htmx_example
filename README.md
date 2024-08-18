@@ -6,7 +6,7 @@
 
  date   : 2024/07/24
 
- update : 2024/08/01 
+ update : 2024/08/18
 
 ***
 
@@ -35,7 +35,10 @@ yarn dev
 ***
 ### blog
 
-https://zenn.dev/knaka0209/books/988b02e6eba017
+***
+# License
+
+* MIT
 
 ***
 
